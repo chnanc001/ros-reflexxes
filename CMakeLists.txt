@@ -8,7 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-include_directories(include/ros-reflexxes)
+include_directories(include)
 
 add_library(ReflexxesTypeII SHARED
 src/TypeIIRML/ReflexxesAPI.cpp
@@ -41,8 +41,8 @@ src/TypeIIRML/TypeIIRMLVelocityMethods.cpp
 src/TypeIIRML/TypeIIRMLVelocitySetupPhaseSyncSelectionVector.cpp
 )
 
-install(TARGETS ReflexxesTypeII LIBRARY DESTINATION lib)
 
+install(TARGETS ReflexxesTypeII LIBRARY DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include)
 
 
@@ -60,7 +60,6 @@ endif()
 
 ament_export_include_directories(include)
 ament_export_libraries(ReflexxesTypeII)
-
 
 
 ament_package()
