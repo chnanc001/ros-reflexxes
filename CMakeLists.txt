@@ -8,7 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-include_directories(include)
+include_directories(include/ros-reflexxes)
 
 add_library(ReflexxesTypeII SHARED
 src/TypeIIRML/ReflexxesAPI.cpp
